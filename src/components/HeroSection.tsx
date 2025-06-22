@@ -11,7 +11,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen bg-gradient-hero flex items-center relative overflow-hidden pt-20">
+    <section id="hero" className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-slate-800 flex items-center relative overflow-hidden pt-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>

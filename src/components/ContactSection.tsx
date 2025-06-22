@@ -25,9 +25,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-contact relative">
+    <section id="contact" className="py-20 bg-gradient-to-b from-slate-800 via-slate-900 to-gray-900 relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -35,7 +35,7 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold font-inter text-white mb-6">
             Kontakt
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Bereit für Ihr nächstes Video-Projekt? Lassen Sie uns sprechen!
           </p>
         </div>
@@ -135,7 +135,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">E-Mail</h4>
-                    <p className="text-white/80">kontakt@golden-parrot.de</p>
+                    <p className="text-white/90">kontakt@golden-parrot.de</p>
                   </div>
                 </div>
                 
@@ -145,7 +145,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Telefon</h4>
-                    <p className="text-white/80">+49 (0) 123 456 789</p>
+                    <p className="text-white/90">+49 (0) 123 456 789</p>
                   </div>
                 </div>
                 
@@ -155,7 +155,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Standort</h4>
-                    <p className="text-white/80">Berlin, Deutschland</p>
+                    <p className="text-white/90">Berlin, Deutschland</p>
                   </div>
                 </div>
               </div>
@@ -165,7 +165,7 @@ const ContactSection = () => {
               <h3 className="text-xl font-bold font-inter text-white mb-4">
                 Antwortzeit
               </h3>
-              <p className="text-white/80">
+              <p className="text-white/90">
                 Wir antworten in der Regel innerhalb von 24 Stunden auf Ihre Anfrage.
               </p>
             </div>

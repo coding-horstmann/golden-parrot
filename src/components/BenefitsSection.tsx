@@ -27,9 +27,9 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 bg-gradient-benefits relative">
+    <section id="benefits" className="py-20 bg-gradient-to-b from-slate-600 via-slate-700 to-slate-800 relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -40,7 +40,7 @@ const BenefitsSection = () => {
               KI-Videos?
             </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Entdecken Sie die Vorteile modernster KI-Technologie für Ihre Videoproduktion
           </p>
         </div>
@@ -61,7 +61,7 @@ const BenefitsSection = () => {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-white/80 leading-relaxed text-lg">
+                <p className="text-white/90 leading-relaxed text-lg">
                   {benefit.description}
                 </p>
               </div>

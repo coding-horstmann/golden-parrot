@@ -32,9 +32,9 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="process" className="py-20 bg-gradient-process relative">
+    <section id="process" className="py-20 bg-gradient-to-b from-slate-800 via-slate-700 to-slate-600 relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       <div className="absolute top-0 left-1/3 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -45,7 +45,7 @@ const ProcessSection = () => {
               Prozess
             </span>
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             In nur 4 einfachen Schritten zu Ihrem professionellen Werbevideo
           </p>
         </div>
@@ -78,7 +78,7 @@ const ProcessSection = () => {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/90 leading-relaxed">
                   {step.description}
                 </p>
               </div>
