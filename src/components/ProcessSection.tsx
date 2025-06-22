@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Cpu, MessageSquare, CheckCircle } from 'lucide-react';
 
@@ -32,9 +31,8 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="process" className="py-20 bg-gradient-to-b from-slate-800 via-slate-700 to-slate-600 relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/30"></div>
+    <section id="process" className="py-20 relative">
+      {/* Subtle overlay effects only */}
       <div className="absolute top-0 left-1/3 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">

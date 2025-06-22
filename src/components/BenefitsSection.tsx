@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Zap, DollarSign, Clock, Target } from 'lucide-react';
 
@@ -27,9 +26,8 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 bg-gradient-to-b from-slate-600 via-slate-700 to-slate-800 relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/30"></div>
+    <section id="benefits" className="py-20 relative">
+      {/* Subtle overlay effects only */}
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">

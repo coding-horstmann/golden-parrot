@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -25,9 +24,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-slate-800 via-slate-900 to-gray-900 relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/40"></div>
+    <section id="contact" className="py-20 relative">
+      {/* Subtle overlay effects only */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">

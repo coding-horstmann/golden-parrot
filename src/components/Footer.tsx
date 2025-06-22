@@ -1,12 +1,8 @@
-
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-900 via-gray-800 to-black py-12 relative">
-      {/* Background overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/50"></div>
-      
+    <footer className="py-12 relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
