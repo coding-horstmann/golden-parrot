@@ -65,9 +65,11 @@ export default {
 				}
 			},
 			backgroundImage: {
-				'gradient-hero': 'linear-gradient(135deg, #000000 0%, #0f1419 50%, #1a1b3d 100%)',
-				'gradient-middle': 'linear-gradient(135deg, #1a1b3d 0%, #2563eb 50%, #3b82f6 100%)',
-				'gradient-footer': 'linear-gradient(135deg, #3b82f6 0%, #1e1b4b 50%, #312e81 100%)',
+				'gradient-hero': 'linear-gradient(180deg, #000000 0%, #0f1419 40%, #1a1b3d 100%)',
+				'gradient-process': 'linear-gradient(180deg, #1a1b3d 0%, #1e293b 30%, #0f172a 100%)',
+				'gradient-benefits': 'linear-gradient(180deg, #0f172a 0%, #1e1b4b 50%, #1a1b3d 100%)',
+				'gradient-contact': 'linear-gradient(180deg, #1a1b3d 0%, #1e1b4b 40%, #312e81 100%)',
+				'gradient-footer': 'linear-gradient(180deg, #312e81 0%, #1e1b4b 50%, #0f172a 100%)',
 				'gradient-text-blue': 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)',
 				'gradient-text-process': 'linear-gradient(135deg, #60a5fa 0%, #2563eb 100%)',
 				'gradient-button': 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',

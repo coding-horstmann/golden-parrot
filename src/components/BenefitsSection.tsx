@@ -27,10 +27,10 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 bg-gradient-middle relative">
+    <section id="benefits" className="py-20 bg-gradient-benefits relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/5"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
@@ -40,7 +40,7 @@ const BenefitsSection = () => {
               KI-Videos?
             </span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Entdecken Sie die Vorteile modernster KI-Technologie für Ihre Videoproduktion
           </p>
         </div>
@@ -49,7 +49,7 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div key={index} className="group">
               {/* Glass Card */}
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8 h-full hover:bg-white/15 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-8 h-full hover:bg-black/40 transition-all duration-300 hover:transform hover:scale-105">
                 {/* Icon */}
                 <div className="w-16 h-16 bg-gradient-button rounded-xl flex items-center justify-center mb-6 group-hover:shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-300">
                   <benefit.icon size={32} className="text-white" />
@@ -61,7 +61,7 @@ const BenefitsSection = () => {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-slate-300 leading-relaxed text-lg">
+                <p className="text-white/80 leading-relaxed text-lg">
                   {benefit.description}
                 </p>
               </div>

@@ -11,11 +11,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen bg-gradient-hero flex items-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen bg-gradient-hero flex items-center relative overflow-hidden pt-20">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -29,7 +29,7 @@ const HeroSection = () => {
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Professionelle Videos mit modernster KI-Technologie. 
             Schneller, kostengünstiger und beeindruckender als je zuvor.
           </p>

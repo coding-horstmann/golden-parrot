@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-footer py-12 relative">
       {/* Background overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
               <span className="text-white font-bold text-xl font-inter">Golden Parrot</span>
             </div>
-            <p className="text-slate-200 leading-relaxed">
+            <p className="text-white/80 leading-relaxed">
               Professionelle AI-Video Produktion für moderne Unternehmen. 
               Wir bringen Ihre Marke mit innovativer Technologie zum Leben.
             </p>
@@ -32,7 +32,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-slate-200 hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                 >
                   Home
                 </button>
@@ -40,7 +40,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-slate-200 hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                 >
                   Prozess
                 </button>
@@ -48,7 +48,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-slate-200 hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                 >
                   Warum KI-Videos?
                 </button>
@@ -56,7 +56,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-slate-200 hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                 >
                   Kontakt
                 </button>
@@ -71,22 +71,22 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-slate-200 hover:text-white transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                   Impressum
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-200 hover:text-white transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                   Datenschutz
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-200 hover:text-white transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                   Über uns
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-200 hover:text-white transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">
                   AGB
                 </a>
               </li>
@@ -96,7 +96,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-200 text-sm">
+          <p className="text-white/80 text-sm">
             © 2024 Golden Parrot. Alle Rechte vorbehalten.
           </p>
           

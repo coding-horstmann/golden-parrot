@@ -25,24 +25,24 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-footer relative">
+    <section id="contact" className="py-20 bg-gradient-contact relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-inter text-white mb-6">
             Kontakt
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Bereit für Ihr nächstes Video-Projekt? Lassen Sie uns sprechen!
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8">
+          <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-8">
             <h3 className="text-2xl font-bold font-inter text-white mb-6">
               Projekt anfragen
             </h3>
@@ -59,7 +59,7 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="Ihr Name"
                 />
               </div>
@@ -75,7 +75,7 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="ihre@email.de"
                 />
               </div>
@@ -90,7 +90,7 @@ const ContactSection = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="Ihr Unternehmen"
                 />
               </div>
@@ -106,7 +106,7 @@ const ContactSection = () => {
                   rows={5}
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="Beschreiben Sie Ihr Video-Projekt..."
                 />
               </div>
@@ -123,7 +123,7 @@ const ContactSection = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8">
+            <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-8">
               <h3 className="text-2xl font-bold font-inter text-white mb-6">
                 Kontaktinformationen
               </h3>
@@ -135,7 +135,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">E-Mail</h4>
-                    <p className="text-slate-300">kontakt@golden-parrot.de</p>
+                    <p className="text-white/80">kontakt@golden-parrot.de</p>
                   </div>
                 </div>
                 
@@ -145,7 +145,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Telefon</h4>
-                    <p className="text-slate-300">+49 (0) 123 456 789</p>
+                    <p className="text-white/80">+49 (0) 123 456 789</p>
                   </div>
                 </div>
                 
@@ -155,17 +155,17 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Standort</h4>
-                    <p className="text-slate-300">Berlin, Deutschland</p>
+                    <p className="text-white/80">Berlin, Deutschland</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8">
+            <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-8">
               <h3 className="text-xl font-bold font-inter text-white mb-4">
                 Antwortzeit
               </h3>
-              <p className="text-slate-300">
+              <p className="text-white/80">
                 Wir antworten in der Regel innerhalb von 24 Stunden auf Ihre Anfrage.
               </p>
             </div>

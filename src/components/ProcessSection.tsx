@@ -32,10 +32,10 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="process" className="py-20 bg-gradient-middle relative">
+    <section id="process" className="py-20 bg-gradient-process relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="absolute top-0 left-1/3 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute top-0 left-1/3 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
@@ -45,7 +45,7 @@ const ProcessSection = () => {
               Prozess
             </span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
             In nur 4 einfachen Schritten zu Ihrem professionellen Werbevideo
           </p>
         </div>
@@ -54,7 +54,7 @@ const ProcessSection = () => {
           {steps.map((step, index) => (
             <div key={index} className="relative group">
               {/* Glass Card */}
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 h-full hover:bg-white/15 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-6 h-full hover:bg-black/40 transition-all duration-300 hover:transform hover:scale-105">
                 {/* Step Number */}
                 <div className="w-12 h-12 bg-gradient-button rounded-full flex items-center justify-center text-white font-bold text-lg mb-4">
                   {step.number}
@@ -64,7 +64,7 @@ const ProcessSection = () => {
                 <div className="mb-4">
                   <step.icon 
                     size={32} 
-                    className={step.isGradient ? "text-blue-400" : "text-blue-400"} 
+                    className="text-blue-400" 
                   />
                 </div>
                 
@@ -78,7 +78,7 @@ const ProcessSection = () => {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-white/80 leading-relaxed">
                   {step.description}
                 </p>
               </div>
