@@ -9,13 +9,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
-                  alt="Golden Parrot Logo" 
-                  className="w-6 h-6 object-contain"
-                />
-              </div>
+              <img 
+                src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
+                alt="Golden Parrot Logo" 
+                className="w-12 h-12 object-contain"
+              />
               <span className="text-white font-bold text-xl font-inter">Golden Parrot</span>
             </div>
             <p className="text-white/90 leading-relaxed">
