@@ -47,9 +47,8 @@ const HeroSection = () => {
             <img 
               src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
               alt="Golden Parrot Logo" 
-              className="w-32 h-32 mx-auto object-contain"
+              className="w-48 h-48 mx-auto object-contain"
             />
-            <div className="absolute inset-0 w-32 h-32 mx-auto bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full blur-xl opacity-30"></div>
           </div>
         </div>
       </div>

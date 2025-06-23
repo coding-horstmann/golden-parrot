@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
               alt="Golden Parrot Logo" 
-              className="w-12 h-12 object-contain"
+              className="w-16 h-16 object-contain"
             />
             <span className="text-white font-bold text-xl font-inter">Golden Parrot</span>
           </div>
