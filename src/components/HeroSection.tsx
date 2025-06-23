@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
@@ -43,8 +44,12 @@ const HeroSection = () => {
           
           {/* Golden Parrot Visual Element */}
           <div className="mt-16 relative">
-            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-4xl shadow-2xl shadow-yellow-500/25">
-              🦜
+            <div className="w-24 h-24 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl shadow-yellow-500/25">
+              <img 
+                src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
+                alt="Golden Parrot Logo" 
+                className="w-16 h-16 object-contain"
+              />
             </div>
             <div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full blur-xl opacity-30"></div>
           </div>
