@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -16,11 +19,45 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Vielen Dank für Ihre Nachricht! Wir melden uns bald bei Ihnen.');
+    setLoading(true);
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/kontakt@golden-parrot.de', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          _subject: 'Neue Kontaktanfrage über das Formular',
+          _captcha: 'false',
+        }),
+      });
+      if (response.ok) {
+        toast({
+          title: 'Nachricht gesendet!',
+          description: 'Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.',
+        });
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        toast({
+          title: 'Fehler',
+          description: 'Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Fehler',
+        description: 'Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.',
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -45,7 +82,10 @@ const ContactSection = () => {
               Projekt anfragen
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              className="space-y-6"
+              onSubmit={handleSubmit}
+            >
               <div>
                 <label htmlFor="name" className="block text-white font-medium mb-2">
                   Name *
@@ -55,10 +95,10 @@ const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  value={formData.name}
-                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="Ihr Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                 />
               </div>
               
@@ -71,10 +111,10 @@ const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  value={formData.email}
-                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="ihre@email.de"
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
               </div>
               
@@ -86,10 +126,10 @@ const ContactSection = () => {
                   type="text"
                   id="company"
                   name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="Ihr Unternehmen"
+                  value={formData.company}
+                  onChange={handleInputChange}
                 />
               </div>
               
@@ -102,16 +142,17 @@ const ContactSection = () => {
                   name="message"
                   required
                   rows={5}
-                  value={formData.message}
-                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all duration-300"
                   placeholder="Beschreiben Sie Ihr Video-Projekt..."
+                  value={formData.message}
+                  onChange={handleInputChange}
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full inline-flex items-center justify-center space-x-2 bg-gradient-button text-white px-6 py-3 rounded-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+                disabled={loading}
               >
                 <span>Nachricht senden</span>
                 <Send size={18} />
