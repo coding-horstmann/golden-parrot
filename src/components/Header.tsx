@@ -1,16 +1,31 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const sec = document.getElementById(sectionId);
+        if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      setIsMenuOpen(false);
     }
+  };
+
+  // NEU: Logo und Name wie Home-Button behandeln
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection('hero');
   };
 
   return (
@@ -19,12 +34,14 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img 
-              src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
-              alt="Golden Parrot Logo" 
-              className="w-16 h-16 object-contain"
-            />
-            <span className="text-white font-bold text-xl font-inter">Golden Parrot</span>
+            <a href="/" onClick={handleLogoClick} className="flex items-center space-x-2 cursor-pointer">
+              <img 
+                src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
+                alt="Golden Parrot Logo" 
+                className="w-16 h-16 object-contain inline-block align-middle"
+              />
+              <span className="text-white font-bold text-xl font-inter align-middle ml-2">Golden Parrot</span>
+            </a>
           </div>
 
           {/* Desktop Navigation */}

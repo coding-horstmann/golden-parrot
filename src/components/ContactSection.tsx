@@ -34,7 +34,7 @@ const ContactSection = () => {
             Kontakt
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Bereit für Ihr nächstes Video-Projekt? Lassen Sie uns sprechen!
+            Bereit für Ihr nächstes KI-Video? Jetzt beraten lassen!
           </p>
         </div>
 
@@ -134,26 +134,6 @@ const ContactSection = () => {
                   <div>
                     <h4 className="text-white font-semibold mb-1">E-Mail</h4>
                     <p className="text-white/90">kontakt@golden-parrot.de</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-button rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Telefon</h4>
-                    <p className="text-white/90">+49 (0) 123 456 789</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-button rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Standort</h4>
-                    <p className="text-white/90">Berlin, Deutschland</p>
                   </div>
                 </div>
               </div>

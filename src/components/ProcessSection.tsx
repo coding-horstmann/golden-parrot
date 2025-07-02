@@ -6,26 +6,26 @@ const ProcessSection = () => {
     {
       number: '1',
       title: 'Briefing & Konzept',
-      description: 'Wir besprechen Ihre Ziele, Zielgruppe und erstellen ein maßgeschneidertes Konzept für Ihr Video.',
+      description: 'Wir definieren gemeinsam Ihre Ziele, Zielgruppe und entwickeln ein individuelles Storyboard.',
       icon: FileText,
     },
     {
       number: '2',
       title: 'KI-Produktion',
-      description: 'Unsere fortschrittliche KI erstellt Ihr Video basierend auf dem abgestimmten Konzept.',
+      description: 'Unsere KI-gestützte Videoproduktion verwandelt das Konzept in hochwertige Werbe‑ und Imagefilme.',
       icon: Cpu,
       isGradient: true,
     },
     {
       number: '3',
       title: 'Feedback & Optimierung',
-      description: 'Sie erhalten eine Vorschau und wir optimieren das Video nach Ihrem Feedback.',
+      description: 'Sie prüfen den ersten Entwurf – wir passen Schnitt, Ton und Stil nach Ihrem Input an.',
       icon: MessageSquare,
     },
     {
       number: '4',
       title: 'Finalisierung & Lieferung',
-      description: 'Nach finaler Freigabe erhalten Sie Ihr fertiges Video in allen gewünschten Formaten.',
+      description: 'Nach Ihrer Freigabe erhalten Sie Ihr fertiges KI-Video.',
       icon: CheckCircle,
     },
   ];
@@ -44,41 +44,35 @@ const ProcessSection = () => {
             </span>
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            In nur 4 einfachen Schritten zu Ihrem professionellen Werbevideo
+            Von der Idee zum fertigen KI-Video in 4 Schritten
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative group">
+            <div key={index} className="relative group flex flex-col items-center">
               {/* Glass Card */}
-              <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-6 h-full hover:bg-black/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-6 h-full hover:bg-black/40 transition-all duration-300 hover:transform hover:scale-105 text-center flex flex-col items-center">
                 {/* Step Number */}
-                <div className="w-12 h-12 bg-gradient-button rounded-full flex items-center justify-center text-white font-bold text-lg mb-4">
+                <div className="w-12 h-12 bg-gradient-button rounded-full flex items-center justify-center text-white font-bold text-lg mb-4 mx-auto">
                   {step.number}
                 </div>
                 
-                {/* Icon */}
-                <div className="mb-4">
+                {/* Title */}
+                <h3 className="text-xl font-bold font-inter mb-3 text-white">
+                  {step.title}
+                </h3>
+                {/* Description */}
+                <p className="text-white/90 leading-relaxed mb-4">
+                  {step.description}
+                </p>
+                {/* Icon (jetzt unten) */}
+                <div className="mt-auto flex justify-center">
                   <step.icon 
                     size={32} 
                     className="text-blue-400" 
                   />
                 </div>
-                
-                {/* Title */}
-                <h3 className={`text-xl font-bold font-inter mb-3 ${
-                  step.isGradient 
-                    ? "bg-gradient-text-blue bg-clip-text text-transparent" 
-                    : "text-white"
-                }`}>
-                  {step.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-white/90 leading-relaxed">
-                  {step.description}
-                </p>
               </div>
 
               {/* Arrow connector */}

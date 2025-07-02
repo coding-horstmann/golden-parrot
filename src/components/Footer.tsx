@@ -1,7 +1,35 @@
-
 import React from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const sec = document.getElementById(sectionId);
+        if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
+  const handleDatenschutzClick = (e: React.MouseEvent) => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
+  const handleImpressumClick = (e: React.MouseEvent) => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <footer className="py-12 relative">
       <div className="container mx-auto px-4 relative z-10">
@@ -9,16 +37,17 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
-                alt="Golden Parrot Logo" 
-                className="w-16 h-16 object-contain"
-              />
-              <span className="text-white font-bold text-xl font-inter">Golden Parrot</span>
+              <Link to="/">
+                <img 
+                  src="/lovable-uploads/332677ec-1043-44de-93b4-38aed623005d.png" 
+                  alt="Golden Parrot Logo" 
+                  className="w-16 h-16 object-contain inline-block align-middle"
+                />
+                <span className="text-white font-bold text-xl font-inter align-middle ml-2">Golden Parrot</span>
+              </Link>
             </div>
             <p className="text-white/90 leading-relaxed">
-              Professionelle AI-Video Produktion für moderne Unternehmen. 
-              Wir bringen Ihre Marke mit innovativer Technologie zum Leben.
+              Professionelle KI Videoproduktion für Startups, E‑Commerce und KMU. Mit KI-gestütztem Video Marketing bringen wir Ihre Marke ins Rampenlicht.
             </p>
           </div>
 
@@ -30,7 +59,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button 
-                  onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => scrollToSection('hero')}
                   className="text-white/90 hover:text-white transition-colors duration-300"
                 >
                   Home
@@ -38,7 +67,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => scrollToSection('process')}
                   className="text-white/90 hover:text-white transition-colors duration-300"
                 >
                   Prozess
@@ -46,7 +75,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => scrollToSection('benefits')}
                   className="text-white/90 hover:text-white transition-colors duration-300"
                 >
                   Warum KI-Videos?
@@ -54,7 +83,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => scrollToSection('contact')}
                   className="text-white/90 hover:text-white transition-colors duration-300"
                 >
                   Kontakt
@@ -70,24 +99,14 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/90 hover:text-white transition-colors duration-300">
+                <Link to="/impressum" className="text-white/90 hover:text-white transition-colors duration-300" onClick={handleImpressumClick}>
                   Impressum
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white/90 hover:text-white transition-colors duration-300">
+                <Link to="/datenschutz" className="text-white/90 hover:text-white transition-colors duration-300" onClick={handleDatenschutzClick}>
                   Datenschutz
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/90 hover:text-white transition-colors duration-300">
-                  Über uns
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/90 hover:text-white transition-colors duration-300">
-                  AGB
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -101,18 +120,6 @@ const Footer = () => {
           
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a 
-              href="#" 
-              className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-blue-400 hover:bg-white/20 transition-all duration-300"
-            >
-              <span className="text-sm font-bold">Li</span>
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-blue-400 hover:bg-white/20 transition-all duration-300"
-            >
-              <span className="text-sm font-bold">X</span>
-            </a>
             <a 
               href="#" 
               className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-blue-400 hover:bg-white/20 transition-all duration-300"

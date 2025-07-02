@@ -6,17 +6,17 @@ const BenefitsSection = () => {
     {
       icon: Zap,
       title: 'Modernste KI-Technologie',
-      description: 'Nutzen Sie die neuesten Entwicklungen in der KI-Video-Produktion für beeindruckende Ergebnisse.',
+      description: 'Nutzen Sie neueste Entwicklungen in der KI Videoproduktion für atemberaubende Ergebnisse.',
     },
     {
       icon: DollarSign,
-      title: 'Kostengünstig & Effizient',
-      description: 'Bis zu 70% Kostenersparnis gegenüber traditioneller Videoproduktion bei gleicher Qualität.',
+      title: 'Effizient & Kostensparend',
+      description: 'Sparen Sie bis zu 70\u202F% gegenüber klassischer Videoproduktion',
     },
     {
       icon: Clock,
       title: 'Schnelle Umsetzung',
-      description: 'Von der Idee zum fertigen Video in nur wenigen Tagen statt Wochen.',
+      description: 'Von der Idee zum fertigen Video in Tagen/Wochen statt Monaten.',
     },
     {
       icon: Target,
