@@ -19,11 +19,10 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Headline */}
           <h1 className="text-3xl md:text-5xl font-bold font-inter mb-6 leading-tight">
-            <span className="text-white">KI-gestützte Videoproduktion:</span>{' '}
+            <span className="text-white">Agentur für innovative Videoproduktion mit KI:</span>{' '}
             <span className="bg-gradient-text-blue bg-clip-text text-transparent">
               Werbefilme, Image- & E-Commerce-Videos
-            </span>{' '}
-            <span className="text-white">erstellen lassen</span>
+            </span>
           </h1>
           
           {/* Subheadline */}
