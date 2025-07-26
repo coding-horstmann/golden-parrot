@@ -12,12 +12,77 @@
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
+    background: #000000;
   }
 
   #root {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+    background: #000000;
+  }
+
+  /* Spezifische Regeln für Toast und andere UI-Komponenten */
+  [data-radix-toast-viewport] {
+    background: transparent !important;
+  }
+
+  /* Alle Elemente mit bg-background sollten transparent oder dunkel sein */
+  .bg-background {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  /* Verhindere weiße Hintergründe in UI-Komponenten */
+  .border {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* Spezifische Regel für Toast-Viewport */
+  .fixed.left-1\/2.top-1\/2.z-\[100\] {
+    background: transparent !important;
+  }
+
+  /* Zusätzliche Regeln für alle UI-Komponenten */
+  [class*="bg-background"] {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  /* Spezifische Regeln für Dialoge und Modals */
+  [role="dialog"] {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+
+  /* Verhindere weiße Hintergründe in allen shadcn/ui Komponenten */
+  .group\[\.toaster\]\:bg-background {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  /* Mobile-spezifische Regeln */
+  @media (max-width: 768px) {
+    html, body {
+      overflow-x: hidden !important;
+      position: relative;
+    }
+    
+    #root {
+      overflow-x: hidden !important;
+      position: relative;
+    }
+    
+    /* Verhindere horizontale Scrollbalken auf mobilen Geräten */
+    * {
+      max-width: 100vw;
+    }
+    
+    /* Spezifische Regel für alle Container */
+    .container {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+    }
   }
 
   :root {
