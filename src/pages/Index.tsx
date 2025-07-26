@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen font-inter relative">
+    <div className="min-h-screen font-inter relative w-full overflow-x-hidden">
       {/* Unified gradient background for entire page */}
       <div className="fixed inset-0 bg-gradient-to-b from-black via-slate-900 via-black via-slate-800 via-slate-900 to-black -z-10"></div>
       

@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Datenschutz = () => (
-  <div className="min-h-screen font-inter relative">
+  <div className="min-h-screen font-inter relative w-full overflow-x-hidden">
     {/* Gradient-Hintergrund wie auf der Homepage */}
     <div className="fixed inset-0 bg-gradient-to-b from-black via-slate-900 via-black via-slate-800 via-slate-900 to-black -z-10"></div>
     <Header />
